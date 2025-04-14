@@ -1,0 +1,142 @@
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb);
+ font-family: "Segoe UI", "Arial Rounded MT Bold", "Helvetica", "Arial", sans-serif;
+  
+  
+}
+
+.accent-top-middle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 150px;
+  background: radial-gradient(circle at top center, rgba(255, 255, 255, 0.4), transparent 70%);
+  pointer-events: none;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  padding: 1rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(90%, 500px);
+  min-height: 300px;
+  border-radius: 1.5rem;
+  text-align: center;
+  padding: 2rem;
+  color: purple;
+  transition: transform 0.3s ease;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+section p {
+  font-size: 1.2em;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: aliceblue;
+  color: purple;
+  font-weight: bold;;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.4s ease;
+}
+
+button:hover {
+  background-color: purple;
+color: aliceblue;
+}
+#options-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: 1rem; 
+  gap: 0.5rem; 
+}
+
+.model-option {
+  padding: 0.5rem 1rem;
+  background-color: purple; 
+  color: aliceblue; 
+  font-weight: bold;
+  border: 2px solid purple; 
+  border-radius: 1rem; 
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.model-option:hover {
+  background-color: aliceblue;
+  color: purple;
+  transform: scale(1.1); 
+}
+.p-rights-bottom {
+  display: flex;
+  position: absolute; 
+  bottom: 1rem;
+  left: 50%; 
+  transform: translateX(-50%); 
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem; 
+  text-align: center; 
+  font-size: 0.9rem;
+  font-weight: bold;
+  opacity: 0.5;
+  text-shadow: 
+  -1px -1px 0 black,
+   1px -1px 0 black,
+  -1px  1px 0 black,
+   1px  1px 0 black;
+}
+
+
+/*
+@media (max-width: 600px) {
+  section {
+    padding: 1.5rem;
+    width: 90%;
+    min-height: 250px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  section p {
+    font-size: 1em;
+  }
+
+  button {
+    font-size: 0.95em;
+  }
+}
+*/
