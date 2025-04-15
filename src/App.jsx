@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
 import './App.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
-  const chatModels = ['Mistral', 'DeepSeek','ChatGPT 4.0'];
+  const chatModels = ['Mistral', 'DeepSeek', 'ChatGPT 4.0'];
   const [showOptions, setShowOptions] = useState(false);
+  const navigate = useNavigate();
 
   const ChooseModel = () => {
-    setShowOptions(true);
+    setShowOptions((status) => !status);
   };
 
   return (
@@ -54,12 +56,16 @@ const App = () => {
           >
             Choose
           </motion.button>
-          
+
           {showOptions && (
             <div id="options-container">
               {chatModels.map((model) => (
-                <button key={model} className="model-option">
-                  {`${model}`}
+                <button
+                  key={model}
+                  className="model-option"
+                  onClick={() => navigate(`/${model.toLowerCase()}`)}
+                >
+                  {model}
                 </button>
               ))}
             </div>
